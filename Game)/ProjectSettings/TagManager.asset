@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Vrag
+  - Score
+  - Ground
+  - Platform
+  - Enemy
+  - Bullet
+  - Water
+  - Hilka
+  - Minihilka
+  - PlusBullet
+  - SL2
+  - Music
+  - Money
+  - Oryz
+  - Shop
+  - ButtelSpeed
+  - Vrag2
+  - ButtelJump
+  - Batut
+  - Ladder
+  - BulletSlizen
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - Enemy
+  - Platform
+  - Sl2
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
