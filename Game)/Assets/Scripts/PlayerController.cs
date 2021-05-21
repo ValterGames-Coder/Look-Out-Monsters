@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using GoogleMobileAds.Api;
 
 public class PlayerController : MonoBehaviour
 {
@@ -81,45 +80,7 @@ public class PlayerController : MonoBehaviour
     bool JumpOffPlatform = false;
 
     private bool _isVibration = true;
-    private RewardedAd rewarded;
-    private const string rewardedUtils = "ca-app-pub-4721480223801357/6355503010";
-
-    private int whathealth = 0;
-
-    public Button secondhealtbutton;
-
-    private void OnEnable()
-    {
-        rewarded = new RewardedAd(rewardedUtils);
-        AdRequest adRequest = new AdRequest.Builder().Build();
-        rewarded.LoadAd(adRequest);
-
-        rewarded.OnUserEarnedReward += HandleUserEarnedReward;
-    }
-
-    private void OnDisable()
-    {
-        rewarded.OnUserEarnedReward -= HandleUserEarnedReward;
-    }
-
-    public void HandleUserEarnedReward(object sender, Reward agrs){
-        if(whathealth == 0){
-            StartCoroutine(SecondHealth());
-            whathealth = 1;
-        }
-    }
-    public void ShowAd(){
-        if(rewarded.IsLoaded()) rewarded.Show();
-    }
-
-    IEnumerator SecondHealth(){
-        gameObject.tag = "Untagged";
-        panel.SetActive(false);
-        apanel = false;
-        health = 10;
-        yield return new WaitForSeconds(3f);
-        gameObject.tag = "Player";
-    }
+    
     void Start()
     {
         if(PlayerPrefs.GetInt("Vibrate") == 0) _isVibration = false;
@@ -368,7 +329,6 @@ public class PlayerController : MonoBehaviour
 
     public void Deid()
     {
-        if(whathealth == 1) secondhealtbutton.GetComponent<Button>().interactable = false;
         panel.SetActive(true);
         apanel = true;
     }

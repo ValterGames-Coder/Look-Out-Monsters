@@ -1,6 +1,5 @@
 <dependencies>
   <packages>
-    <package>com.google.android.gms:play-services-ads:19.5.0</package>
     <package>com.google.games:gpgs-plugin-support:0.10.12</package>
   </packages>
   <files>
